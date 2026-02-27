@@ -1,4 +1,6 @@
 import "./HomePage.css";
+import { Project } from "./Components/Project";
+import todoPreview from "./assets/todoPreview.png";
 export default function HomePage() {
   return (
     <>
@@ -46,48 +48,116 @@ export default function HomePage() {
         <h1 className="project-h1">PROJECTS</h1>
 
         <div className="projects-container">
-          <article className="project-card">
-            <div className="card-text-details">
-              <div className="project-meta">
-                <p className="project-number">[01]</p>
-                <p className="project-name">Todo Buddy</p>
-              </div>
+          {
+            <>
+              <Project
+                projectName="Todo Buddy"
+                number="01"
+                image={todoPreview}
+                year="2026"
+                stack='["HTML", "CSS", "JS", "React"]'
+              />
 
-              <div className="project-meta">
-                <p className="project-number">[Year]</p>
-                <p className="project-name">2026</p>
-              </div>
-
-              <div className="project-meta">
-                <p className="project-number">[Tech]</p>
-                <div>
-                  <p className="project-name">HTML</p>
-                  <p className="project-name">CSS</p>
-                  <p className="project-name">JS</p>
-                </div>
-              </div>
-
-              <div className="project-meta">
-                <p className="project-number">[Visit Website]</p>
-                <div className="enter-svg-container">
-                  <svg
-                    class="h-12px"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    {" "}
-                    <path
-                      d="M4.80248 10.069L8.07867 7.24247H0V0H1.52629V5.92566H8.07867L4.80248 3.09912L5.88157 2.16813L11 6.58407L5.88157 11L4.80248 10.069Z"
-                      fill="black"
-                    ></path>{" "}
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </article>
+              <Project
+                projectName="UseMemry"
+                number="02"
+                image={todoPreview}
+                year="2026"
+                stack='["HTML", "CSS", "JS"]'
+              />
+            </>
+          }
         </div>
       </section>
+
+      <footer className="contact">
+        <header className="contact-header">
+          <h1>KAY</h1>
+
+          <div className="copyright">
+            <span className="copyright-sym">
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+              >
+                <text x="50%" y="50%" dy=".3em">
+                  ©
+                </text>
+              </svg>
+            </span>
+            <span>2026</span>
+          </div>
+        </header>
+
+        <section className="hello">
+          <p>COME</p>
+          <p>SAY</p>
+          <p>HI</p>
+        </section>
+
+        <section className="contact-links">
+          <div className="linkedin socials-icon">
+            <svg
+              className="arrow-svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              color="var(--token-45c3258e-4d2a-4b3e-81ad-3afbbbf577b1, rgb(0, 0, 0))"
+              style={{ width: "100%", height: "100%" }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 10l7-7m0 0l7 7m-7-7v18"
+              ></path>
+            </svg>
+            <p className="linkedin">LI</p>
+          </div>
+          <nav>
+            <ul>
+              <li className="nav-footer">
+                <svg
+                  className="arrow-svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  color="var(--token-45c3258e-4d2a-4b3e-81ad-3afbbbf577b1, rgb(0, 0, 0))"
+                  style={{ width: "100%", height: "100%" }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  ></path>
+                </svg>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="socials-icon ig">
+            <p className="linkedin socials-icon">IG</p>
+            <svg
+              className="arrow-svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              color="var(--token-45c3258e-4d2a-4b3e-81ad-3afbbbf577b1, rgb(0, 0, 0))"
+              style={{ width: "100%", height: "100%" }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 10l7-7m0 0l7 7m-7-7v18"
+              ></path>
+            </svg>
+          </div>
+        </section>
+      </footer>
     </>
   );
 }
