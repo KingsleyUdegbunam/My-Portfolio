@@ -6,12 +6,18 @@
   padding: 1.2rem 0.7rem;
   height: 11vh;
 
-  background-color: aliceblue;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), #00000040);
 }
 
 h1 {
   font-family: "Koulen", sans-serif;
   font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  scroll-behavior: smooth;
 }
 
 p,
@@ -29,12 +35,29 @@ nav ul {
 
 section {
   padding-block: 3rem;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
 }
 
 .landing-wrapper {
   padding: 0;
+  background-image: url("./assets/landing.jpeg");
+  background-size: 560%;
+  background-position: top;
+  background-position-y: 20%;
+  background-position-x: 51.5%;
+
+  position: relative;
 }
+
+.overlay-landing {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  background-color: black;
+  opacity: 0.7;
+}
+
 .nav-li {
   text-decoration: none;
   list-style-type: none;
@@ -48,21 +71,48 @@ section {
   cursor: pointer;
 }
 
+.landing-page {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 105vh;
+  justify-content: space-between;
+}
+
+.hero-text {
+  padding-inline: 1rem;
+}
+
+.hero-text p,
+.hero-text span {
+  font-size: 3rem;
+  font-family: "Koulen", sans-serif;
+  color: rgb(233, 233, 233);
+}
+
+.hero-text .script-text {
+  background-color: red;
+  padding-inline: 0.5rem;
+}
+
 .landing {
   font-family: "Koulen", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: end;
   padding: 0rem;
+  padding-inline: 0.5rem;
 
   /*   background-color: beige; */
-  height: 90vh;
+  /* height: 90vh; */
 }
 
 .landing span {
   font-size: 14rem;
   font-weight: 500;
   line-height: 0.76;
+
+  color: black;
 
   font-family: "Koulen", sans-serif;
 }
@@ -90,6 +140,16 @@ section {
 
 .scroll {
   text-align: right;
+}
+.header,
+.landing,
+.about-section,
+.landing span,
+.hero-text p,
+.hero-text span {
+  position: relative;
+  z-index: 6;
+  color: rgb(233, 233, 233);
 }
 
 .project-h1 {
@@ -139,12 +199,52 @@ section {
   gap: 1rem;
 }
 
-.contact {
-  height: 100vh;
-  padding: 1rem;
+.contact,
+.contact-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.contact-wrapper {
+  position: relative;
+  background-image: url("./assets/connect.jpeg");
+
+  background-position: center;
+  background-position-x: 65%;
+  background-size: cover;
+  height: 100%;
+  padding: 0;
+  padding: 1rem;
+}
+
+.overlay-footer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: radial-gradient(transparent, black);
+  opacity: 0.6;
+}
+
+.header-welcome-text-wrapper,
+.hello,
+.contact-links {
+  z-index: 1;
+}
+
+.header-welcome-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+
+.contact {
+  height: 100vh;
+  padding: 1rem;
+  color: white;
+  margin-top: 4rem;
 }
 
 .contact-header {
@@ -183,26 +283,26 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white !important;
 }
 
 .copyright-sym svg {
   font-size: 1rem;
   display: grid;
   place-content: center;
-  /* font-size: 2rem;
-  color: orange;
-  line-height: 0.6; */
-  /* display: flex;
-  justify-content: center;
-  justify-self: center;
-  align-self: center;
-  text-align: center; */
+  color: white !important;
+}
+
+.copyright-sym svg text {
+  fill: white;
+  text-anchor: middle;
 }
 
 .arrow-svg {
   width: 1rem !important;
   height: 1rem !important;
   transform: rotate(-90deg);
+  color: white;
 }
 
 .socials-icon {
@@ -221,6 +321,7 @@ ul .arrow-svg {
   width: 1.5rem !important;
 }
 
-/*  text-anchor="middle"
-                  font-size="16"
-                  font-family="Arial, sans-serif" */
+.social-text {
+  font-family: "Koulen", sans-serif;
+  font-size: 1.2rem;
+}
