@@ -1,1 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 0.7rem;
+  height: 11vh;
+
+  background-color: aliceblue;
+}
+
+h1 {
+  font-family: "Koulen";
+  font-size: 1rem;
+}
+
+p,
+span,
+ul {
+  font-family: "Roboto Mono";
+  font-size: 0.6rem;
+}
+
+nav ul {
+  width: fit-content;
+  height: fit-content;
+}
+
+section {
+  padding-block: 3rem;
+  padding-inline: 2rem;
+}
+
+.landing-wrapper {
+  padding: 0;
+}
+.nav-li {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-li:hover {
+  list-style: square;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.landing {
+  font-family: "Koulen";
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0rem;
+
+  /*   background-color: beige; */
+  height: 90vh;
+}
+
+.landing span {
+  font-size: 14rem;
+  font-weight: 500;
+  line-height: 0.76;
+
+  font-family: "Koulen";
+}
+
+.about-section {
+  padding-block-start: 5rem;
+  padding-block-end: 3rem;
+  padding-inline: 1rem;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 0;
+}
+
+.logo-about,
+.about-text {
+  font-family: "koulen";
+  line-height: 1.1;
+  font-size: 2.2rem;
+  width: 22ch;
+}
+
+.scroll {
+  text-align: right;
+}
+
+.project-h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.enter-svg-container {
+  width: 0.75rem;
+  aspect-ratio: 1;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-meta :nth-child(2) {
+  text-align: end;
+}
+
+.card-text-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
