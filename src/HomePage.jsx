@@ -1,14 +1,23 @@
 import "./HomePage.css";
-import Lenis from "lenis";
+import { ReactLenis, useLenis } from "lenis/react";
 import { Project } from "./Components/Project";
 import todoPreview from "./assets/todoPreview.png";
 
-const lenis = new Lenis({
+/* const lenis = new Lenis({
   autoRaf: true,
 });
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+}); */
+
 export default function HomePage() {
+  const lenis = useLenis((lenis) => {
+    console.log(lenis);
+  });
   return (
     <>
+      <ReactLenis root />
       <section id="landing-wrapper" className="landing-wrapper">
         <div className="overlay-landing"></div>
         <section className="landing-page">
@@ -46,14 +55,16 @@ export default function HomePage() {
         </section>
 
         <section className="about-section">
-          <header className="intro-text">
-            <h1 className="logo-about">KAY</h1>
-          </header>
           <section className="about-details">
-            <p className="about-text">
-              THIS IS THE FOLIO OF UDEGBUNAM kINGSLEY KENECHUKWU{" "}
-              <span className="kay-interject">[KAY]</span>
-            </p>
+            <section className="about-left-container">
+              <header className="intro-text">
+                <h1 className="logo-about">KAY</h1>
+              </header>
+              <p className="about-text">
+                THIS IS THE FOLIO OF UDEGBUNAM kINGSLEY KENECHUKWU{" "}
+                <span className="kay-interject">[KAY]</span>
+              </p>
+            </section>
             <p className="about-details">
               A CREATIVE FRONTEND DEVELOPER FOCUSED ON BUILDING SLEEK
               EXPERIENCES THAT TRANSFORM SIMPLE WEBSITES INTO SOMETHING
