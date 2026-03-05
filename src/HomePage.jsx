@@ -1,27 +1,47 @@
 import "./HomePage.css";
-import { ReactLenis, useLenis } from "lenis/react";
+import { useState, useEffect, useRef } from "react";
+import { ReactLenis } from "lenis/react";
 import { Project } from "./Components/Project";
 import todoPreview from "./assets/todoPreview.png";
 
-/* const lenis = new Lenis({
-  autoRaf: true,
-});
-
-lenis.on("scroll", (e) => {
-  console.log(e);
-}); */
-
 export default function HomePage() {
-  const lenis = useLenis((lenis) => {
-    console.log(lenis);
-  });
+  const [upwardScroll, setUpwardScroll] = useState(false);
+  const scrollref = useRef(window.scrollY);
+
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > scrollref.current) {
+        console.log("Upward scroll");
+        setUpwardScroll(true);
+      } else {
+        console.log("downward");
+        setUpwardScroll(false);
+      }
+      scrollref.current = currentScrollY;
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (!headerRef.current) return;
+    upwardScroll === true
+      ? headerRef.current.classList.add("hide-header")
+      : headerRef.current.classList.remove("hide-header");
+  }, [upwardScroll]);
+
   return (
     <>
       <ReactLenis root />
       <section id="landing-wrapper" className="landing-wrapper">
         <div className="overlay-landing"></div>
         <section className="landing-page">
-          <header className="header">
+          <header ref={headerRef} className="header">
             <h1>KAY</h1>
 
             <nav>
@@ -33,7 +53,7 @@ export default function HomePage() {
                   <a href="#works">WORK</a>
                 </li>
                 <li className="nav-li">
-                  <a href="#contact">INFO</a>
+                  <a href="#contact">CONNECT</a>
                 </li>
               </ul>
             </nav>
@@ -47,28 +67,21 @@ export default function HomePage() {
               With <span className="script-text">Intent.</span>
             </p>
           </div>
-          <section className="landing">
-            <span>K</span>
-            <span>A</span>
-            <span>Y</span>
-          </section>
         </section>
 
         <section className="about-section">
           <section className="about-details">
             <section className="about-left-container">
-              <header className="intro-text">
-                <h1 className="logo-about">KAY</h1>
-              </header>
-              <p className="about-text">
+              <span className="about-text">
                 THIS IS THE FOLIO OF UDEGBUNAM kINGSLEY KENECHUKWU{" "}
-                <span className="kay-interject">[KAY]</span>
-              </p>
+              </span>
+              <span className="kay-interject">[KAY]</span>
             </section>
+            {}
             <p className="about-details">
-              A CREATIVE FRONTEND DEVELOPER FOCUSED ON BUILDING SLEEK
-              EXPERIENCES THAT TRANSFORM SIMPLE WEBSITES INTO SOMETHING
-              EXTRAORDINARY{" "}
+              A Creative Frontend Developer focused on building sleek
+              experiences that transforns simple websites into something
+              extraordinary.
             </p>
 
             <p className="scroll">[SCROLL DOWN]</p>
@@ -107,10 +120,10 @@ export default function HomePage() {
           <div className="overlay-footer"></div>
           <div className="header-welcome-text-wrapper">
             <header className="contact-header">
-              <h1>KAY</h1>
+              <p>[KAY]</p>
 
               <div className="copyright">
-                <span className="copyright-sym">
+                <span className="small-device copyright-sym">
                   <svg
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
@@ -122,18 +135,26 @@ export default function HomePage() {
                     </text>
                   </svg>
                 </span>
-                <span>2026</span>
+
+                <span className="small-device">2026</span>
+                <span className="large-device">[COPYRIGHT 2026]</span>
               </div>
             </header>
-            <section className="hello">
+          </div>
+          <section className="hello">
+            <div className="hello-word-2">
               <p>COME</p>
               <p>SAY</p>
-              <p>HI</p>
-            </section>
-          </div>
+            </div>
+            <p>HI</p>
+          </section>
 
           <section className="contact-links">
-            <div className="linkedin socials-icon">
+            <a
+              href="https://www.instagram.com/kaythescientist_/"
+              target="_blank"
+              className="ig socials-icon"
+            >
               <svg
                 className="arrow-svg"
                 fill="none"
@@ -149,8 +170,9 @@ export default function HomePage() {
                   d="M5 10l7-7m0 0l7 7m-7-7v18"
                 ></path>
               </svg>
-              <p className="social-text">LI</p>
-            </div>
+              <p className="social-text small-device">IG</p>
+              <p className="social-text large-device">Instagram</p>
+            </a>
             <nav>
               <ul>
                 <a href="#">
@@ -175,8 +197,13 @@ export default function HomePage() {
               </ul>
             </nav>
 
-            <div className="socials-icon ig">
-              <p className="social-text">IG</p>
+            <a
+              href="https://www.linkedin.com/in/kingsley-udegbunam/"
+              target="_blank"
+              className="socials-icon linkedin"
+            >
+              <p className="social-text small-device">LI</p>
+              <p className="social-text large-device">LinkedIn</p>
               <svg
                 className="arrow-svg"
                 fill="none"
@@ -192,7 +219,7 @@ export default function HomePage() {
                   d="M5 10l7-7m0 0l7 7m-7-7v18"
                 ></path>
               </svg>
-            </div>
+            </a>
           </section>
         </section>
       </footer>
