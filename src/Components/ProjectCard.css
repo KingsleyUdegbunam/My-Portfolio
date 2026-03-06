@@ -1,0 +1,144 @@
+.enter-svg-container svg {
+  display: block;
+
+  width: clamp(12px, 2vw, 18px);
+  aspect-ratio: 1;
+  padding: 0;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-meta :nth-child(2) {
+  text-align: end;
+}
+
+.card-text-details,
+.project-sub-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-sub-details {
+  max-height: fit-content;
+}
+
+.purge-whitespace {
+  max-height: fit-content;
+}
+
+.project-footer {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.project-images {
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 820px) {
+  .project-h1 {
+    margin-bottom: 3rem;
+  }
+
+  .project-card {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .card-text-details {
+    gap: 1rem;
+  }
+
+  .project-meta .project-footer {
+    padding: 0;
+    display: block;
+    align-self: flex-start;
+  }
+
+  .project-card * {
+    flex: 1;
+  }
+
+  .project-meta :nth-child(2) {
+    text-align: initial;
+  }
+
+  .project-footer {
+    display: flex;
+    gap: 0;
+    align-items: center;
+  }
+
+  .project-footer > * {
+    flex: 1;
+  }
+
+  .project-sub-details {
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+
+  .visit-text-container {
+    max-width: 50%;
+  }
+
+  .enter-svg-container {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-card *:first-child {
+    flex: 1;
+  }
+
+  .project-card *:last-child {
+    flex: 1.25;
+  }
+
+  .card-text-details {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .project-sub-details {
+    gap: 2rem;
+  }
+
+  .card-text-details > *:first-child {
+    flex: 1;
+  }
+
+  .card-text-details > *:last-child {
+    flex: 2;
+  }
+
+  .project-header {
+    justify-content: left;
+  }
+
+  .project-header p {
+    display: inline;
+    max-width: fit-content;
+  }
+}
