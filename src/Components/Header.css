@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 0.7rem;
+  line-height: 1;
+  position: fixed !important;
+  width: 100%;
+
+  z-index: 10 !important;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), hsla(0, 0%, 0%, 0.785));
+
+  mix-blend-mode: difference;
+
+  backdrop-filter: blur(1px);
+  transition: transform 200ms;
+}
+
+h1 {
+  font-family: "Koulen", sans-serif;
+  font-size: clamp(1rem, 5vw, 2.8rem);
+  padding: 0;
+}
+
+.header ul {
+  mix-blend-mode: difference;
+  /* color: white; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  scroll-behavior: smooth;
+}
+
+.header a {
+  font-size: 12px;
+}
+
+.hide-header {
+  transform: translateY(-100px);
+}
+
+nav ul {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style-type: none;
+}
+
+.nav-li:hover,
+.nav-li:focus {
+  list-style: square;
+  font-style: italic;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 820px) {
+  .header {
+    padding-inline: 1rem;
+  }
+}
