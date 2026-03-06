@@ -1,0 +1,77 @@
+.contact-links {
+  z-index: 1;
+}
+
+ul .arrow-svg {
+  transform: rotate(0deg);
+  height: 1.5rem;
+  width: 1.5rem;
+
+  transition: color 200ms;
+}
+
+ul:hover .arrow-svg {
+  color: palegoldenrod;
+}
+
+.nav-footer {
+  list-style: none;
+}
+
+.contact-links {
+  font-family: "koulen", sans-serif;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-text {
+  font-family: "Koulen", sans-serif;
+  font-size: 1.2rem;
+}
+
+.arrow-svg {
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(90deg);
+  color: var(---WHITE-COLOR);
+  transition: color 300ms;
+}
+
+.socials-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 300ms;
+}
+
+.ig .arrow-svg {
+  transform: rotate(-90deg);
+}
+
+.linkedin:hover {
+  color: #4e8dcb;
+}
+
+.linkedin:hover .arrow-svg {
+  color: #4e8dcb;
+}
+
+.ig:hover svg,
+.ig:hover {
+  color: #c13584;
+}
+
+.large-device {
+  display: none;
+}
+
+@media screen and (min-width: 820px) {
+  .small-device {
+    display: none;
+  }
+
+  .large-device {
+    display: initial;
+  }
+}

@@ -1,0 +1,34 @@
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(---WHITE-COLOR) !important;
+}
+
+.copyright-sym svg {
+  font-size: 1rem;
+  display: grid;
+  place-content: center;
+  color: var(---WHITE-COLOR) !important;
+}
+
+.copyright-sym svg text {
+  fill: var(---WHITE-COLOR);
+  text-anchor: middle;
+}
+
+@media screen and (min-width: 820px) {
+  .small-device {
+    display: none;
+  }
+
+  .large-device {
+    display: initial;
+  }
+}
