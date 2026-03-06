@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Style+Script&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  ---WHITE-COLOR: rgb(242, 242, 242);
+}
+
+section {
+  padding-block: 3rem;
+  padding-inline: 1rem;
+}
+
+p,
+span,
+ul {
+  font-family: "Roboto Mono";
+  font-size: clamp(0.6rem, 2.3vw, 0.92rem);
+}
+
+.header,
+.landing,
+.about-section,
+.landing span,
+.hero-text p,
+.hero-text span {
+  position: relative;
+  z-index: 2;
+  color: var(---WHITE-COLOR);
+}
+
+.hero-text p,
+.hero-text span,
+.hello p,
+.about-text {
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  font-family: "Koulen", sans-serif;
+  color: var(---WHITE-COLOR);
+  /* color: red; */
+}
+
+/* HEADER */
+
+/* HERO */
+@media screen and (min-width: 820px) {
+  section {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    padding-inline: 3rem;
+  }
+}
