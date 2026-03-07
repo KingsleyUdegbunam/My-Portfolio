@@ -15,6 +15,11 @@
 </head>
 
 <body>
+  <script>
+    window.onerror = function (msg, src, line) {
+      document.body.innerHTML = '<p style="color:red;padding:20px">' + msg + ' at line ' + line + '</p>';
+    }
+  </script>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

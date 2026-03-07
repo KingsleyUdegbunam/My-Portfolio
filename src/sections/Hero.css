@@ -2,6 +2,7 @@
 .landing-wrapper {
   padding: 0;
   background-image: url("../assets/landing.jpeg");
+  background-color: #424242;
   background-size: 700%;
   background-position: top;
   background-position-y: 20%;
@@ -51,7 +52,9 @@ p.about-details {
 
 .hero-text p,
 .hero-text span {
-  font-size: clamp(2.4rem, 10.5vw, 5.5rem);
+  font-family: "Koulen", sans-serif;
+  color: var(---WHITE-COLOR);
+  font-size: clamp(2.4rem, 13vw, 5.5rem);
 }
 
 .landing {
@@ -74,6 +77,13 @@ p.about-details {
 .about-section {
   padding-block: 0;
   padding-inline: 1rem;
+}
+
+.about-text {
+  font-size: clamp(2.5rem, 9.5vw, 5rem);
+  font-family: "Koulen", sans-serif;
+  color: var(---WHITE-COLOR);
+  /* color: red; */
 }
 
 .about-details {

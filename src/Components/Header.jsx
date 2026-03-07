@@ -2,20 +2,21 @@ import { useRef, useState, useEffect } from "react";
 import "./Header.css";
 
 export default function Header() {
-  const [upwardScroll, setUpwardScroll] = useState(false);
-  const scrollref = useRef(window.scrollY);
+  const [navHidden, setNavHidden] = useState(false);
   const headerRef = useRef(null);
+
+  //110vh
+  const verticalScrollOrigin = useRef(window.innerHeight * 1.1);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > scrollref.current) {
-        setUpwardScroll(true);
+      if (currentScrollY > verticalScrollOrigin.current) {
+        setNavHidden(true);
       } else {
-        setUpwardScroll(false);
+        setNavHidden(false);
       }
-      scrollref.current = currentScrollY;
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -24,10 +25,11 @@ export default function Header() {
 
   useEffect(() => {
     if (!headerRef.current) return;
-    upwardScroll === true
+    navHidden === true
       ? headerRef.current.classList.add("hide-header")
       : headerRef.current.classList.remove("hide-header");
-  }, [upwardScroll]);
+  }, [navHidden]);
+
   return (
     <header ref={headerRef} className="header">
       <h1>KAY</h1>

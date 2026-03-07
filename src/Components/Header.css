@@ -8,12 +8,12 @@
 
   z-index: 10 !important;
 
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), hsla(0, 0%, 0%, 0.785));
-
-  mix-blend-mode: difference;
+  /* WILL ADD ON PORTFOLIO EXPANSION */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), hsla(0, 0%, 0%, 0.198));
 
   backdrop-filter: blur(1px);
-  transition: transform 200ms;
+
+  transition: transform 300ms;
 }
 
 h1 {

@@ -112,10 +112,6 @@
     flex: 1;
   }
 
-  .project-card *:last-child {
-    flex: 1.25;
-  }
-
   .card-text-details {
     flex-direction: row;
     gap: 0;
