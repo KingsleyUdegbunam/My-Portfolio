@@ -1,6 +1,7 @@
 import { ProjectCard } from "../Components/ProjectCard";
 import todoPreview from "../assets/todoPreview.png";
 import memryVid from "../assets/memry-vid.mp4";
+import quantizedSrc from "../assets/Quantized.mp4";
 import "./Projects.css";
 
 export default function Projects() {
@@ -27,6 +28,15 @@ export default function Projects() {
               year="2026"
               stack='["HTML", "CSS", "JS", "React"]'
               liveLink="https://yourtodobuddy.netlify.app/"
+            />
+
+            <ProjectCard
+              projectName={"Quantized"}
+              number={"03"}
+              src={quantizedSrc}
+              year={"2025"}
+              stack={'["HTML", "CSS", "JS"]'}
+              liveLink="https://quantized23.netlify.app/"
             />
           </>
         }
