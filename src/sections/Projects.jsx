@@ -1,5 +1,6 @@
 import { ProjectCard } from "../Components/ProjectCard";
 import todoPreview from "../assets/todoPreview.png";
+import memryVid from "../assets/memry-vid.mp4";
 import "./Projects.css";
 
 export default function Projects() {
@@ -13,7 +14,7 @@ export default function Projects() {
             <ProjectCard
               projectName="Memry"
               number="01"
-              image={todoPreview}
+              src={memryVid}
               year="2025"
               stack='["HTML", "CSS", "JS"]'
               liveLink="https://usememry.netlify.app/"

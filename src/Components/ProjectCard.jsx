@@ -5,6 +5,7 @@ export function ProjectCard({
   projectName,
   year,
   image,
+  src,
   stack,
   liveLink,
 }) {
@@ -69,7 +70,18 @@ export function ProjectCard({
 
         <section className="project-images">
           <div className="img-container">
-            <img src={image} alt="" />
+            {image && <img src={image} alt={`Preview of ${projectName}`} />}
+            {src && (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="none"
+                src={src}
+                alt={`Preview of ${projectName}`}
+              />
+            )}
           </div>
         </section>
       </article>
