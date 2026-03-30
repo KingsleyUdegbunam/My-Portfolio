@@ -12,10 +12,9 @@ export default function Contact() {
         </div>
         <section className="hello">
           <div className="hello-word-2">
-            <p>COME</p>
-            <p>SAY</p>
+            <p>LET'S</p>
           </div>
-          <p>HI</p>
+          <p>CONNECT</p>
         </section>
         <ContactNav />
       </section>
