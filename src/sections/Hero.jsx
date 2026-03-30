@@ -27,7 +27,7 @@ export default function Hero() {
           {}
           <p className="about-details">
             A Creative Frontend Developer focused on building sleek experiences
-            that transforns simple websites into something extraordinary.
+            that transforms simple websites into something extraordinary.
           </p>
 
           <p className="scroll">[SCROLL DOWN]</p>
