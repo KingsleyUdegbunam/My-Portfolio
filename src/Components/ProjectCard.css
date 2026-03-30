@@ -11,6 +11,10 @@
   justify-content: space-between;
 }
 
+.project-footer:hover {
+  color: red;
+}
+
 .project-meta :nth-child(2) {
   text-align: end;
 }
@@ -38,6 +42,7 @@
   padding-top: 2rem;
   display: flex;
   align-items: center;
+  transition: color 150ms;
 }
 
 .projects-container {
