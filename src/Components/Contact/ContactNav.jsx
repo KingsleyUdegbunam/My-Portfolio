@@ -4,7 +4,7 @@ export function ContactNav() {
   return (
     <section className="contact-links">
       <a
-        href="https://www.instagram.com/kaythescientist_/"
+        href="https://github.com/KingsleyUdegbunam"
         target="_blank"
         className="ig socials-icon"
       >
@@ -21,8 +21,8 @@ export function ContactNav() {
             d="M5 10l7-7m0 0l7 7m-7-7v18"
           ></path>
         </svg>
-        <p className="social-text small-device">IG</p>
-        <p className="social-text large-device">Instagram</p>
+        <p className="social-text small-device">GH</p>
+        <p className="social-text large-device">GitHub</p>
       </a>
       <nav>
         <ul>
