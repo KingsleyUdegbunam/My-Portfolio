@@ -1,5 +1,5 @@
-import { ContactHeader } from "../Components/Contact/ContactHeader";
-import { ContactNav } from "../Components/Contact/ContactNav";
+import { ContactHeader } from "../Contact/ContactHeader";
+import { ContactNav } from "../Contact/ContactNav";
 import "./Contact.css";
 
 export default function Contact() {

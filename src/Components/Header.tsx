@@ -1,16 +1,18 @@
+"use client";
+
 import { useRef, useState, useEffect } from "react";
 import "./Header.css";
 
 export default function Header() {
-  const [navHidden, setNavHidden] = useState(false);
-  const headerRef = useRef(null);
+  const [navHidden, setNavHidden] = useState<boolean>(false);
+  const headerRef = useRef<HTMLElement | null>(null);
 
-  //110vh
-  const verticalScrollOrigin = useRef(window.innerHeight * 1.1);
+  const verticalScrollOrigin = useRef<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      verticalScrollOrigin.current = window.innerHeight * 1.1;
 
       if (currentScrollY > verticalScrollOrigin.current) {
         setNavHidden(true);

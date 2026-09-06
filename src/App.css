@@ -16,7 +16,7 @@ section {
 p,
 span,
 ul {
-  font-family: "Roboto Mono";
+  font-family: var(--font-robotoMono);
   font-size: clamp(0.6rem, 3vw, 1rem);
 }
 
@@ -30,8 +30,6 @@ ul {
   z-index: 2;
   color: var(---WHITE-COLOR);
 }
-
-/* HEADER */
 
 /* HERO */
 @media screen and (min-width: 820px) {

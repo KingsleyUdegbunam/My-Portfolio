@@ -1,6 +1,7 @@
+import { JSX } from "react/jsx-runtime";
 import "./ContactNav.css";
 
-export function ContactNav() {
+export function ContactNav(): JSX.Element {
   return (
     <section className="contact-links">
       <a

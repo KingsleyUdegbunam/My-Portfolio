@@ -1,6 +1,7 @@
+import { JSX } from "react/jsx-runtime";
 import "./ContactHeader.css";
 
-export function ContactHeader() {
+export function ContactHeader(): JSX.Element {
   return (
     <header className="contact-header">
       <p>[KAY]</p>

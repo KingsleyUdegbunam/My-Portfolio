@@ -1,4 +1,4 @@
-import Header from "../Components/Header";
+import Header from "../../Header";
 import "./Hero.css";
 
 export default function Hero() {
@@ -20,7 +20,7 @@ export default function Hero() {
         <section className="about-details">
           <section className="about-left-container">
             <span className="about-text">
-              THIS IS THE FOLIO OF UDEGBUNAM KINGSLEY KENECHUKWU{" "}
+              THIS IS THE FOLIO OF UDEGBUNAM KINGSLEY KENECHUKWU
             </span>
             <span className="kay-interject">[KAY]</span>
           </section>

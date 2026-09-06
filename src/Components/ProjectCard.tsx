@@ -1,20 +1,15 @@
+import { ProjectCardProp } from "../schemas/home";
 import "./ProjectCard.css";
 
 export function ProjectCard({
   number,
   projectName,
   year,
-  image,
   src,
-  stack,
+  stacks,
   liveLink,
-}) {
-  let buildTool = [];
-  try {
-    buildTool = JSON.parse(stack);
-  } catch (e) {
-    console.log("Parsing failed", e.message);
-  }
+}: ProjectCardProp) {
+  const fileType = src.slice(-3);
 
   return (
     <>
@@ -32,10 +27,10 @@ export function ProjectCard({
             </div>
 
             <div className="project-meta">
-              <p className="project-number">[Stack]</p>
+              <p className="project-number">Stacks</p>
 
               <div>
-                {buildTool.map((item, index) => (
+                {stacks.map((item, index) => (
                   <p key={index} className="project-name">
                     {item}
                   </p>
@@ -70,17 +65,15 @@ export function ProjectCard({
 
         <section className="project-images">
           <div className="img-container">
-            {image && <img src={image} alt={`Preview of ${projectName}`} />}
-            {src && (
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="none"
+            {fileType === "png" && (
+              <img
+                className="card-image"
                 src={src}
                 alt={`Preview of ${projectName}`}
               />
+            )}
+            {fileType === "mp4" && (
+              <video autoPlay loop muted playsInline preload="none" src={src} />
             )}
           </div>
         </section>

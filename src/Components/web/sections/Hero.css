@@ -1,7 +1,7 @@
 /* HERO */
 .landing-wrapper {
   padding: 0;
-  background-image: url("../assets/landing.jpeg");
+  background-image: url("/assets/landing.jpeg");
   background-color: #424242;
   background-size: 700%;
   background-position: top;

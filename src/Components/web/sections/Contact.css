@@ -7,7 +7,7 @@
 
 .contact-wrapper {
   position: relative;
-  background-image: url("../assets/connect.jpeg");
+  background-image: url("/assets/connect.jpeg");
   background-color: #1f2a32;
 
   background-position: center;
