@@ -1,7 +1,6 @@
 "use client";
 
 import "../reset.css";
-import "../App.css";
 import Projects from "../components/web/sections/Projects";
 import Contact from "../components/web/sections/Contact";
 import Hero from "../components/web/sections/Hero";

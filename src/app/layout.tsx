@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Koulen } from "next/font/google";
 import { Pinyon_Script } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
+import "./global.css";
 
 const koulen = Koulen({
   subsets: ["latin"],

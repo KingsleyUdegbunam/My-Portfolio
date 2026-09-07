@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Style+Script&display=swap");
+@import "tailwindcss";
+
+@theme inline {
+  --font-robotoMono: var(--font-robotoMono);
+  --font-koulen: var(--font-koulen);
+  --font-pinyon: var(--font-pinyon);
+}
 
 html {
   scroll-behavior: smooth;

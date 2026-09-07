@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import "./Header.css";
 
 export default function Header() {
   const [navHidden, setNavHidden] = useState<boolean>(false);
@@ -25,28 +24,28 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (!headerRef.current) return;
-    navHidden === true
-      ? headerRef.current.classList.add("hide-header")
-      : headerRef.current.classList.remove("hide-header");
-  }, [navHidden]);
+  const navArray = [
+    { title: "HOME", link: "#" },
+    { title: "WORK", link: "#works" },
+    { title: "CONNECT", link: "#contact" },
+  ];
 
   return (
-    <header ref={headerRef} className="header">
-      <h1>KAY</h1>
+    <header
+      ref={headerRef}
+      className={`header bg-[linear-gradient(to_top,rgba(0,0,0,0),hsla(0,0%,0%,0.198))] backdrop-blur-[1px] flex justify-between py-[1.2rem] px-[0.7rem] md:px-4 fixed! w-full z-20! transition-transform duration-300 leading-none ${navHidden ? "-translate-y-25" : ""}`}
+    >
+      <h1 className="font-koulen! text-[clamp(1rem,5vw,2.8rem)]">KAY</h1>
 
       <nav>
-        <ul>
-          <li className="nav-li">
-            <a href="#">HOME</a>
-          </li>
-          <li className="nav-li">
-            <a href="#works">WORK</a>
-          </li>
-          <li className="nav-li">
-            <a href="#contact">CONNECT</a>
-          </li>
+        <ul className="mix-blend-difference flex flex-col gap-[0.4rem]">
+          {navArray.map((link) => (
+            <li className="hover:italic text-[12px] hover:list-[square] focus:italic focus:list-[square]">
+              <a key={link.title} href={link.link}>
+                {link.title}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
 
