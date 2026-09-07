@@ -1,14 +1,13 @@
-import { ProjectBaseArray } from "../../../schemas/home";
+import { Project } from "../../../schemas/home";
 import { ProjectCard } from "../../ProjectCard";
-
-import "./Projects.css";
 
 export default function Projects() {
   let NUMBER = 1;
-  const projectsBaseArray: ProjectBaseArray[] = [
+  const projectsBaseArray: Project[] = [
     {
       projectName: "Memry",
       src: "/assets/memry-vid.mp4",
+      type: "Study",
       year: "2025",
       stacks: ["HTML", "CSS", "JS"],
       liveLink: "https://usememry.netlify.app/",
@@ -16,6 +15,7 @@ export default function Projects() {
     {
       projectName: "Todo Buddy",
       src: "/assets/todoPreview.png",
+      type: "Study",
       year: "2025",
       stacks: ["HTML", "CSS", "JS"],
       liveLink: "https://yourtodobuddy.netlify.app",
@@ -23,6 +23,7 @@ export default function Projects() {
     {
       projectName: "Quantized",
       src: "/assets/Quantized.mp4",
+      type: "Community",
       year: "2025",
       stacks: ["HTML", "CSS", "JS"],
       liveLink: "https://quantized23.netlify.app",
@@ -35,10 +36,10 @@ export default function Projects() {
   }));
 
   return (
-    <section id="works" className="works">
-      <h1 className="project-h1">PROJECTS</h1>
+    <section id="works">
+      <h1 className="text-[4rem] text-center font-koulen pb-12 ">PROJECTS</h1>
 
-      <div className="projects-container">
+      <div className="flex flex-col">
         {
           <>
             {projectsArray.map((project) => (
