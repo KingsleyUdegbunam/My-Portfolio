@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="flex flex-col gap-16 ">
           <div className="max-w-[60vw]">
             <span className="about-text text-[clamp(2.5rem,9.5vw,5rem)]! font-koulen!">
-              THIS IS THE FOLIO OF UDEGBUNAM KINGSLEY KENECHUKWU
+              THIS IS THE FOLIO OF KINGSLEY KENECHUKWU UDEGBUNAM
             </span>
             <span>[KAY]</span>
           </div>
