@@ -3,6 +3,7 @@ import { ProjectCardProp } from "../schemas/home";
 export function ProjectCard({
   number,
   projectName,
+  type,
   year,
   src,
   stacks,
@@ -19,6 +20,11 @@ export function ProjectCard({
             <p>{projectName}</p>
           </div>
           <div className="flex flex-col gap-2.5 md:gap-4.5">
+            <div className="flex justify-between">
+              <p className="md:text-black/60">Type</p>
+              <p>{type}</p>
+            </div>
+
             <div className="flex justify-between">
               <p className="md:text-black/60">Year</p>
               <p>{year}</p>
