@@ -21,9 +21,10 @@ section {
 
 p,
 span,
-ul {
+ul,
+a {
   font-family: var(--font-robotoMono);
-  font-size: clamp(0.6rem, 3vw, 1rem);
+  font-size: clamp(0.7rem, 3vw, 1rem);
 }
 
 .header,

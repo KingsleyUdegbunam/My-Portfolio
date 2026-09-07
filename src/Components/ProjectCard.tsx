@@ -1,5 +1,4 @@
 import { ProjectCardProp } from "../schemas/home";
-import "./ProjectCard.css";
 
 export function ProjectCard({
   number,
@@ -12,72 +11,60 @@ export function ProjectCard({
   const fileType = src.slice(-3);
 
   return (
-    <>
-      <article className="project-card">
-        <div className="card-text-details">
-          <div className="project-meta  project-header purge-whitespace">
-            <p className="project-number">[{number}]</p>
-            <p className="project-name">{projectName}</p>
+    <div>
+      <article className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-6">
+        <div className="flex-1 flex flex-col gap-5 md:gap-9 md:sticky md:top-8 h-fit">
+          <div className="flex justify-between">
+            <p className="md:text-black/60">[{number}]</p>
+            <p>{projectName}</p>
           </div>
-
-          <div className="project-sub-details">
-            <div className="project-meta">
-              <p className="project-number">[Year]</p>
-              <p className="project-name">{year}</p>
+          <div className="flex flex-col gap-2.5 md:gap-4.5">
+            <div className="flex justify-between">
+              <p className="md:text-black/60">Year</p>
+              <p>{year}</p>
             </div>
 
-            <div className="project-meta">
-              <p className="project-number">Stacks</p>
+            <div className="flex justify-between">
+              <p className="md:text-black/60">Stacks</p>
 
-              <div>
+              <div className="flex flex-col justify-end items-end gap-1">
                 {stacks.map((item, index) => (
-                  <p key={index} className="project-name">
+                  <p key={index} className="text-end">
                     {item}
                   </p>
                 ))}
               </div>
             </div>
-
-            <a
-              href={liveLink}
-              target="_blank"
-              className="project-meta project-footer purge-whitespace"
-            >
-              <div className="visit-text-container">
-                <span className="project-number">[Visit Website]</span>
-              </div>
-              <div className="enter-svg-container">
-                <svg
-                  viewBox="0 0 11 11"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {" "}
-                  <path
-                    d="M4.80248 10.069L8.07867 7.24247H0V0H1.52629V5.92566H8.07867L4.80248 3.09912L5.88157 2.16813L11 6.58407L5.88157 11L4.80248 10.069Z"
-                    fill="currentColor"
-                  ></path>{" "}
-                </svg>
-              </div>
-            </a>
           </div>
+
+          <a
+            href={liveLink}
+            target="_blank"
+            className="flex justify-end font-robotoMono transition-all duration-300 hover:text-red-800 group mt-2!"
+          >
+            <span className="md:opacity-0 transition-all duration-300 group-hover:opacity-100">
+              [
+            </span>
+            Visit Website
+            <span className="md:opacity-0 transition-all duration-300 group-hover:opacity-100">
+              ]
+            </span>
+          </a>
         </div>
 
-        <section className="project-images">
-          <div className="img-container">
+        <div className="md:flex-[1.1]!">
+          <div>
             {fileType === "png" && (
-              <img
-                className="card-image"
-                src={src}
-                alt={`Preview of ${projectName}`}
-              />
+              <img src={src} alt={`Preview of ${projectName}`} />
             )}
             {fileType === "mp4" && (
               <video autoPlay loop muted playsInline preload="none" src={src} />
             )}
           </div>
-        </section>
+        </div>
       </article>
-    </>
+
+      <div className="w-full h-px bg-black opacity-5 my-8! md:my-16!"></div>
+    </div>
   );
 }
