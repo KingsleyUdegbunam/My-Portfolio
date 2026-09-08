@@ -39,7 +39,7 @@ export default function Projects() {
     <section id="works">
       <h1 className="text-[4rem] text-center font-koulen pb-12 ">PROJECTS</h1>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col max-w-[1800px] mx-auto!">
         {
           <>
             {projectsArray.map((project) => (

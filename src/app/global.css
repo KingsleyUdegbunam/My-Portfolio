@@ -34,6 +34,11 @@ a {
   color: rgb(242, 242, 242);
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
 /* HERO */
 @media screen and (min-width: 728px) {
   section {

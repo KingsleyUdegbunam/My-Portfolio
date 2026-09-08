@@ -1,10 +1,8 @@
-"use client";
 import { CSSProperties } from "react";
-import { useLenis } from "../../../provider/LenisContext";
+import Image from "next/image";
+import { ToTopBtn } from "../../ToTopButton";
 
 export default function Contact() {
-  const lenis = useLenis();
-
   const contactLinks = [
     {
       link: "mailto:infodevkay@gmail.com",
@@ -25,12 +23,24 @@ export default function Contact() {
   return (
     <footer
       id="contact"
-      className="flex flex-col justify-between p-4 md:px-6 text-white/90"
+      className="relative flex flex-col justify-between h-screen p-4 md:px-6 text-white/90 bg-white"
     >
-      <div className="bg-position-[70%] md:bg-position-[0_62%] flex flex-col justify-between relative bg-[url(/assets/connect.jpeg)] bg-cover p-12 min-h-[calc(100dvh-2rem)]">
-        <div className="absolute size-full overlay-footer bg-[radial-gradient(transparent,black)] top-0 left-0 opacity-60"></div>
+      <div className="absolute inset-0 ">
+        <div className="size-full! m-auto p-4  md:p-8">
+          <div className="relative size-full!">
+            <Image
+              className="object-cover object-[70%] md:object-[0_62%]"
+              src="/assets/connect.jpeg"
+              alt="contact-background-image"
+              fill
+            />
+          </div>
+          <div className="absolute m-4! md:m-8! overlay-footer bg-[radial-gradient(transparent,black)] opacity-60 top-0 bottom-0 left-0 right-0" />
+        </div>
+      </div>
 
-        <div className="z-10 flex items-center justify-center gap-4 font-semibold leading-1 flex-wrap">
+      <div className="max-w-[1800px] mx-auto! w-full bg-cover p-12  size-full flex flex-col justify-between">
+        <div className="z-10 flex items-center justify-center gap-4 font-semibold leading-1 flex-wrap ">
           <p className="text-[4rem]!  sm:text-[4rem]! text-center font-koulen! pt-12">
             LET&apos;S
           </p>
@@ -83,17 +93,7 @@ export default function Contact() {
             );
           })}
         </div>
-
-        <div className="flex justify-center z-10">
-          <button
-            onClick={() => {
-              lenis?.scrollTo(0);
-            }}
-            className="mx-auto p-2 font-koulen! text-white border-b-2 border-transparent hover:border-white hover:text-white/90! duration-200 transition-colors"
-          >
-            Back to Top
-          </button>
-        </div>
+        <ToTopBtn />
       </div>
     </footer>
   );

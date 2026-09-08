@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ProjectCardProp } from "../schemas/home";
 
 export function ProjectCard({
@@ -58,16 +59,30 @@ export function ProjectCard({
           </a>
         </div>
 
-        <div className="md:flex-[1.1]!">
-          <div>
-            {fileType === "png" && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={src} alt={`Preview of ${projectName}`} />
-            )}
-            {fileType === "mp4" && (
-              <video autoPlay loop muted playsInline preload="none" src={src} />
-            )}
-          </div>
+        <div className="md:flex-[1.1]!  ">
+          {fileType === "png" && (
+            <div className="relative h-[clamp(250px,35vw,700px)]">
+              <Image
+                className="object-cover"
+                src={src}
+                alt={`Preview of ${projectName}`}
+                fill
+              />
+            </div>
+          )}
+          {fileType === "mp4" && (
+            <div className="h-[clamp(250px,30vw,600px)] flex">
+              <video
+                className="object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="none"
+                src={src}
+              />
+            </div>
+          )}
         </div>
       </article>
 
