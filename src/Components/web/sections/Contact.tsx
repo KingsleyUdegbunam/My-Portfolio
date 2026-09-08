@@ -6,7 +6,6 @@ export default function Contact() {
   const lenis = useLenis();
 
   const [_, setIsHover] = useState(false);
-  const EmailAddress = "infodevkay@gmail.com";
   const contactLinks = [
     {
       link: "mailto:infodevkay@gmail.com",
