@@ -61,6 +61,7 @@ export function ProjectCard({
         <div className="md:flex-[1.1]!">
           <div>
             {fileType === "png" && (
+              // eslint-disable-next-line @next/next/no-img-element
               <img src={src} alt={`Preview of ${projectName}`} />
             )}
             {fileType === "mp4" && (

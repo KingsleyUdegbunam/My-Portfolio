@@ -16,6 +16,7 @@ export function LenisProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const instance = new Lenis({ autoRaf: true });
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLenis(instance);
 
     return () => instance.destroy();
