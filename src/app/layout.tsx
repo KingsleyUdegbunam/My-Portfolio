@@ -1,9 +1,10 @@
-import ReactLenis from "lenis/react";
 import type { Metadata } from "next";
 import { Koulen } from "next/font/google";
 import { Pinyon_Script } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
+import "../reset.css";
 import "./global.css";
+import { LenisProvider } from "../provider/LenisContext";
 
 const koulen = Koulen({
   subsets: ["latin"],
@@ -27,6 +28,10 @@ export const metadata: Metadata = {
   title: "Kingsley Udegbunam | Portfolio.",
   description:
     "This is the frontend development portfilio of Kingsley Kenechukwu Udegbunam.",
+  authors: [
+    { name: "Kingsley Udegbunam" },
+    { url: "https://kingsleyudegbunam.netlify.app/" },
+  ],
 };
 
 export default function RootLayout({
@@ -39,8 +44,9 @@ export default function RootLayout({
       <body
         className={`${koulen.variable} ${pinyon.variable} ${robotoMono.variable}`}
       >
-        <ReactLenis id="root" />
-        <div id="root">{children}</div>
+        <LenisProvider>
+          <div id="root">{children}</div>
+        </LenisProvider>
       </body>
     </html>
   );
