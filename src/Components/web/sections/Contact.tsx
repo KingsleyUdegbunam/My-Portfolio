@@ -1,29 +1,25 @@
 "use client";
-import { CSSProperties, useState } from "react";
+import { CSSProperties } from "react";
 import { useLenis } from "../../../provider/LenisContext";
 
 export default function Contact() {
   const lenis = useLenis();
 
-  const [_, setIsHover] = useState(false);
   const contactLinks = [
     {
       link: "mailto:infodevkay@gmail.com",
       medium: "Email",
       color: "black",
-      mail: "infodevkay@gmail.cccom",
     },
     {
       link: "https://github.com/KingsleyUdegbunam",
       medium: "github",
       color: "#24292e",
-      mail: null,
     },
     {
       link: "https://www.linkedin.com/in/kingsley-udegbunam",
       medium: "LinkedIn",
       color: "#0072B1",
-      mail: null,
     },
   ];
   return (
@@ -36,7 +32,7 @@ export default function Contact() {
 
         <div className="z-10 flex items-center justify-center gap-4 font-semibold leading-1 flex-wrap">
           <p className="text-[4rem]!  sm:text-[4rem]! text-center font-koulen! pt-12">
-            LET'S
+            LET&apos;S
           </p>
           <p className="text-[4rem]! sm:text-[4rem]! text-center font-koulen! pt-12">
             CONNECT
@@ -45,20 +41,10 @@ export default function Contact() {
 
         <div className="flex flex-col justify-center items-center ">
           {contactLinks.map((c) => {
-            let displayMail = false;
-            const mail = "infodevkay@gmail.com";
             return (
               <a
                 key={c.medium}
                 draggable="false"
-                onMouseEnter={() => {
-                  if (c.medium !== "Email") return;
-                  setIsHover(true);
-                }}
-                onMouseLeave={() => {
-                  if (c.medium !== "Email") return;
-                  setIsHover(false);
-                }}
                 style={{ "--hover-color": c.color } as CSSProperties}
                 className="py-3 px-2 md:py-6 md:px-4 uppercase group border-b-2 border-white/50 text-white/90 flex justify-between w-[85%] items-center transition-colors duration-200 gap-4 font-koulen! text-[1.5rem]! z-10 hover:bg-(--hover-color)/80 group"
                 href={c.link}
