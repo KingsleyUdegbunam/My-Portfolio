@@ -5,12 +5,20 @@ export default function Projects() {
   let NUMBER = 1;
   const projectsBaseArray: Project[] = [
     {
+      projectName: "Lead Bookstore",
+      src: "/assets/lead-store.mp4",
+      type: "Study | Ecommerce",
+      year: "2026",
+      stacks: ["React", "Vite", "JS", "Supabase", "PayStack"],
+      liveLink: "https://https://leadbookstore.netlify.app",
+    },
+    {
       projectName: "Memry",
       src: "/assets/memry-vid.mp4",
       type: "Study",
       year: "2025",
       stacks: ["HTML", "CSS", "JS"],
-      liveLink: "https://usememry.netlify.app/",
+      liveLink: "https://usememry.netlify.app",
     },
     {
       projectName: "Todo Buddy",
