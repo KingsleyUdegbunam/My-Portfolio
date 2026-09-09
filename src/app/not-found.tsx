@@ -25,9 +25,9 @@ export default function NotFound() {
         <div className="flex justify-center z-10 ">
           <Link
             href="/"
-            className="mx-auto p-2 font-koulen! text-white/90 text-[clamp(1.3rem,10vw,2rem)]!  border-b-2 border-b-transparent  hover:border-white/90 duration-200 transition-colors cursor-pointer!"
+            className="mx-auto p-2 font-koulen!  text-[clamp(1.3rem,10vw,1.5rem)]! text-white/70 hover:text-white/90 duration-200 flex items-center"
           >
-            Return to Home
+            [ Return to Home ]
           </Link>
         </div>
       </div>
