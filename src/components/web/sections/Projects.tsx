@@ -10,7 +10,7 @@ export default function Projects() {
       type: "Study | Ecommerce",
       year: "2026",
       stacks: ["React", "Vite", "JS", "Supabase", "PayStack"],
-      liveLink: "https://https://leadbookstore.netlify.app",
+      liveLink: "https://leadbookstore.netlify.app",
     },
     {
       projectName: "Memry",
