@@ -44,16 +44,18 @@ export function ProjectCard({
             </div>
           </div>
 
-          <a
-            href={liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex justify-end font-robotoMono transition-all duration-300 hover:text-red-800 mt-2!"
-          >
-            <span className="transition-all duration-300 ">[</span>
-            Visit Website
-            <span className="transition-all duration-300 ">]</span>
-          </a>
+          <div className="flex justify-end mt-2!">
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex justify-end font-robotoMono transition-all duration-300 hover:text-red-800 w-fit"
+            >
+              <span className="transition-all duration-300 ">[</span>
+              Visit Website
+              <span className="transition-all duration-300 ">]</span>
+            </a>
+          </div>
         </div>
 
         <div className="md:flex-[1.1]!">
