@@ -54,6 +54,8 @@ export default function Contact() {
             return (
               <a
                 key={c.medium}
+                target="_blank"
+                rel="noopener noreferrer"
                 draggable="false"
                 style={{ "--hover-color": c.color } as CSSProperties}
                 className="py-3 px-2 md:py-6 md:px-4 uppercase group border-b-2 border-white/50 text-white/90 flex justify-between w-[85%] items-center transition-colors duration-200 gap-4 font-koulen! text-[1.5rem]! z-10 hover:bg-(--hover-color)/80 group"
