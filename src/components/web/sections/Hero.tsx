@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative md:bg-size-[560%] p-0! pb-6! md:pb-12!  bg-[rgb(66, 66, 66)] ">
       <div className="size-full inset-0  absolute  bg-mist-400 overflow-hidden">
         <Image
-          className=" scale-[230%] object-[52%_170px]  md:scale-[200%] object-cover md:object-[-25px_-60px]!"
+          className=" scale-[225%] object-[52%_250px]  2xl:scale-[200%] object-cover 2xl:object-[-25px_-60px]!"
           src="/assets/landing.jpeg"
           fill
           alt="hero image"
