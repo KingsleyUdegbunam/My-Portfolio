@@ -95,7 +95,7 @@ export default function Contact() {
             );
           })}
         </div>
-        <ToTopBtn />
+        <ToTopBtn color="white" />
       </div>
     </footer>
   );
