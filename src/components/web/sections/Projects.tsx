@@ -1,10 +1,11 @@
-import { Project } from "../../../schemas/home";
+import { Project } from "@/types/home";
 import { ProjectCard } from "../../ProjectCard";
 
 export default function Projects() {
   let NUMBER = 1;
   const projectsBaseArray: Project[] = [
     {
+      id: "leadbookstore",
       projectName: "Lead Bookstore",
       src: "/assets/lead-store.mp4",
       type: "Study | Ecommerce",
@@ -13,25 +14,20 @@ export default function Projects() {
       liveLink: "https://leadbookstore.netlify.app",
     },
     {
+      id: "memry",
       projectName: "Memry",
-      src: "/assets/memry-vid.mp4",
-      type: "Study",
+      src: "/assets/memry.mp4",
+      type: "Learning Tool",
       year: "2025",
       stacks: ["HTML", "CSS", "JS"],
       liveLink: "https://usememry.netlify.app",
     },
+
     {
-      projectName: "Todo Buddy",
-      src: "/assets/todoPreview.png",
-      type: "Study",
-      year: "2025",
-      stacks: ["HTML", "CSS", "JS"],
-      liveLink: "https://yourtodobuddy.netlify.app",
-    },
-    {
+      id: "quantized",
       projectName: "Quantized",
-      src: "/assets/Quantized.mp4",
-      type: "Community",
+      src: "/assets/quantized.mp4",
+      type: "Personal Project",
       year: "2025",
       stacks: ["HTML", "CSS", "JS"],
       liveLink: "https://quantized23.netlify.app",
