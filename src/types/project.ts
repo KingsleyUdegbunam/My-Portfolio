@@ -4,6 +4,7 @@ export type SectionContent = {
   p1: string;
   p2?: string;
   image?: string;
+  bgColor?: string;
 };
 
 export type ProjectData = {
@@ -45,6 +46,7 @@ export type ProjectData = {
       article4?: SectionContent;
       article5?: SectionContent;
     };
+    constraints?: SectionContent;
     reflection: SectionContent;
   };
 };
