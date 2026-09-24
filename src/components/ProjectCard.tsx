@@ -1,14 +1,15 @@
 import Image from "next/image";
-import { ProjectCardProp } from "../schemas/home";
+import { ProjectCardProp } from "../types/home";
+import Link from "next/link";
 
 export function ProjectCard({
+  id,
   number,
   projectName,
   type,
   year,
   src,
   stacks,
-  liveLink,
 }: ProjectCardProp) {
   const fileType = src.slice(-3);
 
@@ -45,16 +46,14 @@ export function ProjectCard({
           </div>
 
           <div className="flex justify-end mt-2!">
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href={`/work/${id}`}
               className="flex justify-end font-robotoMono transition-all duration-300 hover:text-red-800 w-fit"
             >
               <span className="transition-all duration-300 ">[</span>
-              Visit Website
+              View Project
               <span className="transition-all duration-300 ">]</span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -62,7 +61,7 @@ export function ProjectCard({
           {fileType === "png" && (
             <div className="relative h-[clamp(250px,38vw,550px)] min-[480px]:max-[767px]:h-[50vw]">
               <Image
-                className="object-cover "
+                className="object-cover size-full"
                 src={src}
                 alt={`Preview of ${projectName}`}
                 fill
@@ -70,14 +69,14 @@ export function ProjectCard({
             </div>
           )}
           {fileType === "mp4" && (
-            <div className=" w-full! h-full">
+            <div className=" w-full! h-full  max-h-137.5 aspect-343/229 overflow-hidden">
               <video
-                className="object-cover h-full"
+                className="object-cover h-full w-full  scale-105"
                 autoPlay
                 loop
                 muted
                 playsInline
-                preload="none"
+                preload="auto"
                 src={src}
               />
             </div>
