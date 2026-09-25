@@ -3,6 +3,7 @@ import { ProjectHeader } from "./components/ProjectHeader";
 import { ProjectArticle } from "./components/ProjectArticle";
 import Link from "next/link";
 import { StandAloneSection } from "./components/StandAloneSection";
+import ProjectSectionHeader from "./components/ProjectSectionHeader";
 
 type Params = {
   params: Promise<{ id: string }>;
@@ -40,11 +41,8 @@ export default async function ProjectPage({ params }: Params) {
       {sections.direction && <StandAloneSection section={sections.direction} />}
 
       <div className="py-20">
-        {sections.experience && (
-          <h2 className="text-[2rem]! md:text-[3rem]! text-center font-koulen capitalize leading-[100%] font-semibold">
-            {sections.experience?.id}
-          </h2>
-        )}
+        <ProjectSectionHeader section={sections.experience} />
+
         <div className="flex flex-col gap-15 md:gap-25 mt-20">
           <ProjectArticle section={sections.experience?.article1} />
           <ProjectArticle section={sections.experience?.article2} />
@@ -55,12 +53,7 @@ export default async function ProjectPage({ params }: Params) {
 
       {/* The Engineering */}
       <div>
-        {sections.engineering && (
-          <h2 className="text-[2rem]! md:text-[3rem]! text-center font-koulen font-semibold capitalize leading-[100%]">
-            {sections.engineering?.id}
-          </h2>
-        )}
-
+        <ProjectSectionHeader section={sections.engineering} />
         <div className="flex flex-col gap-[60px] md:gap-[100px] mt-[80px]">
           <ProjectArticle section={sections.engineering?.article1} />
           <ProjectArticle section={sections.engineering?.article2} />
