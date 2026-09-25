@@ -1,11 +1,7 @@
 import Image from "next/image";
-import { SectionContent } from "@/types/project";
+import { Article } from "@/types/project";
 
-export function ProjectArticle({
-  section,
-}: {
-  section: SectionContent | undefined;
-}) {
+export function ProjectArticle({ section }: { section: Article | undefined }) {
   if (!section) return;
   return (
     <article className="grid grid-cols-1 gap-5">
