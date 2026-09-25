@@ -1,15 +1,15 @@
-import { SectionContent } from "@/types/project";
+import { Article } from "@/types/project";
 
 export function StandAloneSection({
   section,
 }: {
-  section: SectionContent | undefined;
+  section: Article | undefined;
 }) {
   if (!section) return;
   return (
     <div
       style={{ backgroundColor: `var(--color-${section?.bgColor})` }}
-      className="flex flex-col gap-3 h-[75vh] max-h-112.5 md:max-h-137.5 lg:max-h-237.5 text-center justify-center  px-8  max-h-225 w-full"
+      className="flex flex-col gap-3 h-[75vh] max-h-112.5 md:max-h-137.5 lg:max-h-237.5 text-center justify-center  px-8  w-full"
     >
       <h2 className="text-[0.85rem] text-black/50 uppercase">{section.id}</h2>
 

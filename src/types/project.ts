@@ -1,5 +1,14 @@
 export type SectionContent = {
   id: string;
+  article1: Article;
+  article2?: Article;
+  article3?: Article;
+  article4?: Article;
+  article5?: Article;
+};
+
+export type Article = {
+  id: string;
   header?: string;
   p1: string;
   p2?: string;
@@ -28,25 +37,25 @@ export type ProjectData = {
   heroImage: string;
   overview?: { id: string; header: string; p1: string; p2?: string };
   sections: {
-    overview: SectionContent;
-    challenge?: SectionContent;
-    direction?: SectionContent;
+    overview: Article;
+    challenge?: Article;
+    direction?: Article;
     experience: {
       id: string;
-      article1: SectionContent;
-      article2?: SectionContent;
-      article3?: SectionContent;
-      article4?: SectionContent;
+      article1: Article;
+      article2?: Article;
+      article3?: Article;
+      article4?: Article;
     };
     engineering: {
       id: string;
-      article1: SectionContent;
-      article2?: SectionContent;
-      article3?: SectionContent;
-      article4?: SectionContent;
-      article5?: SectionContent;
+      article1: Article;
+      article2?: Article;
+      article3?: Article;
+      article4?: Article;
+      article5?: Article;
     };
-    constraints?: SectionContent;
-    reflection: SectionContent;
+    constraints?: Article;
+    reflection: Article;
   };
 };

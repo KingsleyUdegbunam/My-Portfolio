@@ -15,7 +15,7 @@ export default async function ProjectPage({ params }: Params) {
   const index = projects.indexOf(project);
   const nextIndex = index + 1;
   const validNextIndex = projects[nextIndex]?.id ? nextIndex : 0;
-  const section = project.sections;
+  const sections = project.sections;
 
   return (
     <div className="max-w-[2500px] mx-auto!">
@@ -33,57 +33,59 @@ export default async function ProjectPage({ params }: Params) {
         />
       </div>
 
-      <StandAloneSection section={section.overview} />
+      <StandAloneSection section={sections.overview} />
 
-      {section.challenge && <StandAloneSection section={section.challenge} />}
+      {sections.challenge && <StandAloneSection section={sections.challenge} />}
 
-      {section.direction && <StandAloneSection section={section.direction} />}
+      {sections.direction && <StandAloneSection section={sections.direction} />}
 
       <div className="py-20">
-        {section.experience && (
-          <h2 className="text-[2rem]! md:text-[3rem]! text-center font-koulen leading-[100%] font-semibold">
-            {section.experience.id}
+        {sections.experience && (
+          <h2 className="text-[2rem]! md:text-[3rem]! text-center font-koulen capitalize leading-[100%] font-semibold">
+            {sections.experience?.id}
           </h2>
         )}
         <div className="flex flex-col gap-15 md:gap-25 mt-20">
-          <ProjectArticle section={section.experience?.article1} />
-          <ProjectArticle section={section.experience?.article2} />
-          <ProjectArticle section={section.experience?.article3} />
-          <ProjectArticle section={section.experience?.article4} />
+          <ProjectArticle section={sections.experience?.article1} />
+          <ProjectArticle section={sections.experience?.article2} />
+          <ProjectArticle section={sections.experience?.article3} />
+          <ProjectArticle section={sections.experience?.article4} />
         </div>
       </div>
 
       {/* The Engineering */}
       <div>
-        <h2 className="text-[2rem]! md:text-[3rem]! text-center font-koulen font-semibold leading-[100%]">
-          {section.engineering?.id}
-        </h2>
+        {sections.engineering && (
+          <h2 className="text-[2rem]! md:text-[3rem]! text-center font-koulen font-semibold capitalize leading-[100%]">
+            {sections.engineering?.id}
+          </h2>
+        )}
 
         <div className="flex flex-col gap-[60px] md:gap-[100px] mt-[80px]">
-          <ProjectArticle section={section.engineering?.article1} />
-          <ProjectArticle section={section.engineering?.article2} />
+          <ProjectArticle section={sections.engineering?.article1} />
+          <ProjectArticle section={sections.engineering?.article2} />
 
-          <ProjectArticle section={section.engineering?.article3} />
+          <ProjectArticle section={sections.engineering?.article3} />
 
-          <ProjectArticle section={section.engineering?.article4} />
+          <ProjectArticle section={sections.engineering?.article4} />
 
-          {section.engineering?.article5 && (
+          {sections.engineering?.article5 && (
             <div className="flex flex-col gap-3 h-[70vh] max-h-[350px] md:max-h-[400px] lg:max-h-[700px] text-center justify-center px-8  max-h-225">
               <h2 className="text-[0.85rem] text-black/50 uppercase ">
-                {section.engineering?.article5?.id}
+                {sections.engineering?.article5?.id}
               </h2>
               <div className="flex flex-col gap-6 max-w-200 mx-auto text-[14px]!">
-                <p>{section.engineering?.article5?.p1}</p>
-                <p>{section.engineering?.article5?.p2}</p>
+                <p>{sections.engineering?.article5?.p1}</p>
+                <p>{sections.engineering?.article5?.p2}</p>
               </div>
             </div>
           )}
         </div>
       </div>
 
-      <StandAloneSection section={section?.constraints} />
+      <StandAloneSection section={sections.constraints} />
 
-      <StandAloneSection section={section.reflection} />
+      <StandAloneSection section={sections.reflection} />
 
       <div className="flex items-center justify-center py-20 lg:py-40 gap-6">
         <a
