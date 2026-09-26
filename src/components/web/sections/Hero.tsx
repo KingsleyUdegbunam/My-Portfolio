@@ -33,7 +33,7 @@ export default function Hero() {
       <article className="relative px-4 z-10 max-w-[1800px] mx-auto!">
         <div className="flex flex-col gap-16 text-white/90">
           <div className="max-w-[80vw] lg:max-w-[68vw]">
-            <p className="about-text text-[clamp(1rem,9vw,4.2rem)]! font-koulen! z-10 leading-[100%]">
+            <p className="about-text text-[clamp(1rem,9vw,4.2rem)]! font-koulen! z-10 leading-[120%]">
               THIS IS THE FOLIO OF KINGSLEY KENECHUKWU UDEGBUNAM
               <span>[KAY]</span>, a creative frontend developer.
             </p>
