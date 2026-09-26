@@ -4,6 +4,7 @@ import { StandAloneSection } from "./components/StandAloneSection";
 import { DetailedSection } from "./components/DetailedSection";
 import { ProjectLinks } from "./components/ProjectLinks";
 import { NextProject } from "./components/NextProject";
+import { HeroVideo } from "@/components/web/HeroVideo";
 type Params = {
   params: Promise<{ id: string }>;
 };
@@ -20,15 +21,7 @@ export default async function ProjectPage({ params }: Params) {
     <div className="max-w-[2500px] mx-auto!">
       <ProjectHeader project={project} />
       <div className="max-h-dvh overflow-hidden">
-        <video
-          className="object-cover h-full w-full object-top aspect-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="none"
-          src={project.heroImage}
-        />
+        <HeroVideo src={project.heroImage} />
       </div>
       <StandAloneSection section={sections.overview} />
       <StandAloneSection section={sections.challenge} />

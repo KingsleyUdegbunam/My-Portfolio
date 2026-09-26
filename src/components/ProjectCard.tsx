@@ -1,6 +1,7 @@
 import { ProjectCardProps } from "@/types/project";
 import Image from "next/image";
 import Link from "next/link";
+import { HeroVideo } from "./web/HeroVideo";
 
 export function ProjectCard({
   id,
@@ -70,21 +71,13 @@ export function ProjectCard({
           )}
           {fileType === "mp4" && (
             <div className=" w-full! h-full  max-h-137.5 aspect-343/229 overflow-hidden">
-              <video
-                className="object-cover h-full w-full  scale-105"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                src={src}
-              />
+              <HeroVideo src={src} scale />
             </div>
           )}
         </div>
       </article>
 
-      <div className="w-full h-px bg-black opacity-5 my-8! md:my-16!"></div>
+      <div className="w-full h-px bg-black opacity-5 mt-20! mb-8 md:my-16!"></div>
     </div>
   );
 }
