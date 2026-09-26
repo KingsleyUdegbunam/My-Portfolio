@@ -5,11 +5,10 @@ export function StandAloneSection({
 }: {
   section: Article | undefined;
 }) {
-  if (!section) return;
+  if (!section) return null;
   return (
-    <div
-      style={{ backgroundColor: `var(--color-${section?.bgColor})` }}
-      className="flex flex-col gap-3 h-[75vh] max-h-112.5 md:max-h-137.5 lg:max-h-237.5 text-center justify-center  px-8  w-full"
+    <section
+      className={`${section.id === "overview" ? "bg-blue-100" : section.id === "reflection" ? "bg-mist-100" : ""} flex flex-col gap-3 h-[75vh] max-h-112.5 md:max-h-137.5 lg:max-h-237.5 text-center justify-center  px-8  w-full text-black/90`}
     >
       <h2 className="text-[0.85rem] text-black/50 uppercase">{section.id}</h2>
 
@@ -22,6 +21,6 @@ export function StandAloneSection({
         <p>{section.p1}</p>
         <p>{section.p2}</p>
       </div>
-    </div>
+    </section>
   );
 }
