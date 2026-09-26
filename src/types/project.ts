@@ -1,3 +1,13 @@
+export type ProjectHeader = ProjectData["header"];
+
+export type ProjectMetaProps<K extends keyof ProjectHeader> = {
+  type: K;
+  content: ProjectHeader[K];
+  position?: "left" | "right";
+};
+
+export type ProjectSections = ProjectData["sections"];
+
 export type SectionContent = {
   id: string;
   articles: Article[];
@@ -8,14 +18,6 @@ export type Article = {
   header?: string;
   p: string[];
   image?: string;
-};
-
-export type ProjectHeader = ProjectData["header"];
-
-export type ProjectMetaProps<K extends keyof ProjectHeader> = {
-  type: K;
-  content: ProjectHeader[K];
-  position?: "left" | "right";
 };
 
 export type ProjectData = {

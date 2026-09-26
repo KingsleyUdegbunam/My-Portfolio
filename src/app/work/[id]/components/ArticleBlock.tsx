@@ -1,15 +1,18 @@
 import Image from "next/image";
 import { Article } from "@/types/project";
 
-export function ProjectArticle({ section }: { section: Article | undefined }) {
+export function ArticleBlock({ section }: { section: Article | undefined }) {
   if (!section) return;
   return (
     <article className="grid grid-cols-1 gap-5">
       <div className="flex flex-col justify-center gap-3 text-center px-4">
         <h2 className="text-[0.85em] text-black/50 uppercase ">{section.id}</h2>
-        <div className="flex flex-col gap-6">
-          <p className="max-w-200 mx-auto">{section.p1}</p>
-          {section?.p2 && <p className="max-w-200 mx-auto">{section.p2}</p>}
+        <div className="flex flex-col gap-6 text-black/90">
+          {section.p.map((text, index) => (
+            <p key={index} className="max-w-200 mx-auto">
+              {text}
+            </p>
+          ))}
         </div>
       </div>
 
