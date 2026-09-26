@@ -10,44 +10,15 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  padding-block: 3rem;
-  padding-inline: 1rem;
-}
-
 p,
 span,
 ul,
 a {
   font-family: var(--font-robotoMono);
-  font-size: clamp(0.7rem, 3vw, 1rem);
-}
-
-.header,
-.landing,
-.about-section,
-.landing span,
-.hero-text p,
-.hero-text span {
-  position: relative;
-  z-index: 2;
-  color: rgb(242, 242, 242);
+  font-size: clamp(0.7rem, 3vw, 0.95rem);
 }
 
 a,
 button {
   cursor: pointer;
-}
-
-/* HERO */
-@media screen and (min-width: 728px) {
-  section {
-    padding-inline: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  section {
-    padding-inline: 3rem;
-  }
 }

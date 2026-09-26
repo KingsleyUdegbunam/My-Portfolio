@@ -1,24 +1,26 @@
+import { ProjectCardProps } from "@/types/project";
 import Image from "next/image";
-import { ProjectCardProp } from "../schemas/home";
+import Link from "next/link";
+import { HeroVideo } from "./web/HeroVideo";
 
 export function ProjectCard({
+  id,
   number,
-  projectName,
+  title,
   type,
   year,
   src,
   stacks,
-  liveLink,
-}: ProjectCardProp) {
+}: ProjectCardProps) {
   const fileType = src.slice(-3);
 
   return (
     <div>
       <article className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-6">
-        <div className="flex-1 flex flex-col gap-5 md:gap-9 md:sticky md:top-8 h-fit">
+        <div className="flex-1 flex flex-col gap-5 md:gap-9 md:sticky md:top-8 h-fit text-black/90">
           <div className="flex justify-between">
             <p className="md:text-black/60">[{number}]</p>
-            <p>{projectName}</p>
+            <p>{title}</p>
           </div>
           <div className="flex flex-col gap-2.5 md:gap-4.5">
             <div className="flex justify-between">
@@ -45,16 +47,14 @@ export function ProjectCard({
           </div>
 
           <div className="flex justify-end mt-2!">
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href={`/work/${id}`}
               className="flex justify-end font-robotoMono transition-all duration-300 hover:text-red-800 w-fit"
             >
               <span className="transition-all duration-300 ">[</span>
-              Visit Website
+              View Project
               <span className="transition-all duration-300 ">]</span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -62,30 +62,22 @@ export function ProjectCard({
           {fileType === "png" && (
             <div className="relative h-[clamp(250px,38vw,550px)] min-[480px]:max-[767px]:h-[50vw]">
               <Image
-                className="object-cover "
+                className="object-cover size-full"
                 src={src}
-                alt={`Preview of ${projectName}`}
+                alt={`Preview of ${title}`}
                 fill
               />
             </div>
           )}
           {fileType === "mp4" && (
-            <div className=" w-full! h-full">
-              <video
-                className="object-cover h-full"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="none"
-                src={src}
-              />
+            <div className=" w-full! h-full  max-h-137.5 aspect-343/229 overflow-hidden">
+              <HeroVideo src={src} scale />
             </div>
           )}
         </div>
       </article>
 
-      <div className="w-full h-px bg-black opacity-5 my-8! md:my-16!"></div>
+      <div className="w-full h-px bg-black opacity-5 mt-20! mb-8 md:my-16!"></div>
     </div>
   );
 }

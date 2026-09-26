@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Koulen } from "next/font/google";
 import { Pinyon_Script } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
-import "../reset.css";
 import "./global.css";
 import { LenisProvider } from "../provider/LenisContext";
 
