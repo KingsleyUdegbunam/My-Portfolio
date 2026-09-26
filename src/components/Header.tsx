@@ -1,30 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useLenis } from "../provider/LenisContext";
+import { useState } from "react";
+import { HomeNav } from "./HomeNav";
 
 export default function Header() {
   const [navHidden, setNavHidden] = useState<boolean>(false);
-  const lenis = useLenis();
-
-  useEffect(() => {
-    if (!lenis) return;
-    const handleScroll = ({ scroll }: { scroll: number }) => {
-      setNavHidden(scroll > window.innerHeight * 1.3);
-    };
-
-    lenis.on("scroll", handleScroll);
-
-    return () => {
-      lenis.off("scroll", handleScroll);
-    };
-  }, [lenis]);
-
-  const navArray = [
-    { title: "HOME", link: "#" },
-    { title: "WORK", link: "#works" },
-    { title: "CONNECT", link: "#contact" },
-  ];
 
   return (
     <header
@@ -39,24 +19,7 @@ export default function Header() {
       <div className="max-w-[1800px] mx-auto! flex justify-between">
         <h1 className="font-koulen! text-[clamp(1rem,5vw,2.8rem)]">KAY</h1>
 
-        <nav>
-          <ul className="flex flex-col gap-4">
-            {navArray.map((link) => (
-              <li
-                key={link.title}
-                className="text-[12px] tracking-tighter hover:list-[square] hover:italic"
-              >
-                <button
-                  onClick={() => {
-                    lenis?.scrollTo(link.link);
-                  }}
-                >
-                  {link.title}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <HomeNav setNavHidden={setNavHidden} />
 
         <span>[2026]</span>
       </div>
