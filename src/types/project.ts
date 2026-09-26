@@ -59,3 +59,11 @@ export type ProjectData = {
     reflection: Article;
   };
 };
+
+export type ProjectHeader = ProjectData["header"];
+
+export type ProjectMetaProps<K extends keyof ProjectHeader> = {
+  type: K;
+  content: ProjectHeader[K];
+  position?: "left" | "right";
+};
