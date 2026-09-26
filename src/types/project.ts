@@ -1,19 +1,21 @@
 export type SectionContent = {
   id: string;
-  article1: Article;
-  article2?: Article;
-  article3?: Article;
-  article4?: Article;
-  article5?: Article;
+  articles: Article[];
 };
 
 export type Article = {
   id: string;
   header?: string;
-  p1: string;
-  p2?: string;
+  p: string[];
   image?: string;
-  bgColor?: string;
+};
+
+export type ProjectHeader = ProjectData["header"];
+
+export type ProjectMetaProps<K extends keyof ProjectHeader> = {
+  type: K;
+  content: ProjectHeader[K];
+  position?: "left" | "right";
 };
 
 export type ProjectData = {
@@ -42,28 +44,13 @@ export type ProjectData = {
     direction?: Article;
     experience: {
       id: string;
-      article1: Article;
-      article2?: Article;
-      article3?: Article;
-      article4?: Article;
+      articles: Article[];
     };
     engineering: {
       id: string;
-      article1: Article;
-      article2?: Article;
-      article3?: Article;
-      article4?: Article;
-      article5?: Article;
+      articles: Article[];
     };
     constraints?: Article;
     reflection: Article;
   };
-};
-
-export type ProjectHeader = ProjectData["header"];
-
-export type ProjectMetaProps<K extends keyof ProjectHeader> = {
-  type: K;
-  content: ProjectHeader[K];
-  position?: "left" | "right";
 };

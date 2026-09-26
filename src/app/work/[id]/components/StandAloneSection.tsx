@@ -18,8 +18,9 @@ export function StandAloneSection({
             {section.header}
           </p>
         )}
-        <p>{section.p1}</p>
-        <p>{section.p2}</p>
+        {section.p.map((text, index) => (
+          <p key={index}>{text}</p>
+        ))}
       </div>
     </section>
   );
