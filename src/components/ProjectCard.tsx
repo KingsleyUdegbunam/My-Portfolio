@@ -16,7 +16,7 @@ export function ProjectCard({
   return (
     <div>
       <article className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-6">
-        <div className="flex-1 flex flex-col gap-5 md:gap-9 md:sticky md:top-8 h-fit">
+        <div className="flex-1 flex flex-col gap-5 md:gap-9 md:sticky md:top-8 h-fit text-black/90">
           <div className="flex justify-between">
             <p className="md:text-black/60">[{number}]</p>
             <p>{projectName}</p>

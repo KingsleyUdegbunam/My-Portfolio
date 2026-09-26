@@ -7,7 +7,7 @@ export default function ProjectSectionHeader({
 }) {
   if (!section) return;
   return (
-    <h2 className="text-[2rem]! md:text-[3rem]! text-center font-koulen font-semibold capitalize leading-[100%]">
+    <h2 className="text-[2rem]! md:text-[3rem]! text-center font-koulen font-semibold capitalize leading-[100%] text-black/90">
       {section.id}
     </h2>
   );

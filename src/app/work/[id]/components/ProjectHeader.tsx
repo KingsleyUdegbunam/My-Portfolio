@@ -7,8 +7,8 @@ export function ProjectHeader({
   project: Pick<ProjectData, "header">;
 }) {
   return (
-    <header className="px-4 flex flex-col">
-      <h1 className=" text-center uppercase font-semibold font-koulen text-[3rem] md:text-[4.5rem] lg:text-[6rem] leading-[100%]!">
+    <header className="px-4 flex flex-col text-black/90">
+      <h1 className=" text-center uppercase font-semibold font-koulen text-[3rem] md:text-[4.5rem] lg:text-[6rem] leading-[100%]! ">
         {project.header.title}
       </h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 justify-center align-center lg:text-center gap-2 py-8">
