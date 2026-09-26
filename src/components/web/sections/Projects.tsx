@@ -40,8 +40,10 @@ export default function Projects() {
   }));
 
   return (
-    <section id="works">
-      <h1 className="text-[4rem] text-center font-koulen pb-12 ">PROJECTS</h1>
+    <section id="works" className="px-4 py-12 md:px-6 lg:px-12">
+      <h1 className="text-[4rem] text-black/90 text-center font-koulen pb-12 ">
+        PROJECTS
+      </h1>
 
       <div className="flex flex-col max-w-[1800px] mx-auto!">
         {
