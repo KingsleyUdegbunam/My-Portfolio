@@ -3,7 +3,7 @@ import Header from "../../Header";
 
 export default function Hero() {
   return (
-    <section className="relative md:bg-size-[560%] pb-6 md:pb-12 bg-[rgb(66, 66, 66)] ">
+    <section className="relative md:bg-size-[560%] pb-6 md:pb-12 bg-[rgb(66, 66, 66)]">
       <div className="size-full inset-0 absolute bg-mist-400 overflow-hidden">
         <Image
           className="scale-[225%] object-[52%_250px] 2xl:scale-[200%] object-cover 2xl:object-[-25px_-60px]"
@@ -30,25 +30,20 @@ export default function Hero() {
         </div>
       </section>
 
-      <div className="about-section px-4 z-10! max-w-[1800px] mx-auto!">
-        <div className="flex flex-col gap-16">
-          <div className="max-w-[60vw]">
-            <span className="about-text text-[clamp(2.5rem,9.5vw,5rem)]! font-koulen!">
+      <article className="relative px-4 z-10 max-w-[1800px] mx-auto!">
+        <div className="flex flex-col gap-16 text-white/90">
+          <div className="max-w-[80vw] lg:max-w-[68vw]">
+            <p className="about-text text-[clamp(1rem,9vw,4.2rem)]! font-koulen! z-10 leading-[100%]">
               THIS IS THE FOLIO OF KINGSLEY KENECHUKWU UDEGBUNAM
-            </span>
-            <span>[KAY]</span>
+              <span>[KAY]</span>, a creative frontend developer.
+            </p>
           </div>
-
-          <p className="font-robotoMono! tracking-tight text-white/60">
-            A Creative Frontend Developer focused on building sleek experiences
-            that transforms simple websites into something extraordinary.
-          </p>
 
           <p className="text-[clamp(0.6rem,0.7vw,0.9rem)]! text-right opacity-50">
             [SCROLL DOWN]
           </p>
         </div>
-      </div>
+      </article>
     </section>
   );
 }
