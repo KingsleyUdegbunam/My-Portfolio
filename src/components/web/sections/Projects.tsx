@@ -1,39 +1,19 @@
-import { Project } from "@/types/home";
 import { ProjectCard } from "../../ProjectCard";
+import { projects } from "@/data/project-data";
+import { ProjectCardProps } from "@/types/project";
 
 export default function Projects() {
   let NUMBER = 1;
-  const projectsBaseArray: Project[] = [
-    {
-      id: "leadbookstore",
-      projectName: "Lead Bookstore",
-      src: "/assets/lead-store.mp4",
-      type: "Study | Ecommerce",
-      year: "2026",
-      stacks: ["React", "Vite", "JS", "Supabase", "PayStack"],
-      liveLink: "https://leadbookstore.netlify.app",
-    },
-    {
-      id: "memry",
-      projectName: "Memry",
-      src: "/assets/memry.mp4",
-      type: "Learning Tool",
-      year: "2025",
-      stacks: ["HTML", "CSS", "JS"],
-      liveLink: "https://usememry.netlify.app",
-    },
-
-    {
-      id: "quantized",
-      projectName: "Quantized",
-      src: "/assets/quantized.mp4",
-      type: "Personal Project",
-      year: "2025",
-      stacks: ["HTML", "CSS", "JS"],
-      liveLink: "https://quantized23.netlify.app",
-    },
-  ];
-
+  const projectsBaseArray: Omit<ProjectCardProps, "number">[] = projects.map(
+    (project) => ({
+      id: project.id,
+      title: project.header.title,
+      src: project.heroImage,
+      type: project.header.type,
+      year: project.header.year,
+      stacks: project.stacks,
+    }),
+  );
   const projectsArray = projectsBaseArray.map((project) => ({
     ...project,
     number: NUMBER++,

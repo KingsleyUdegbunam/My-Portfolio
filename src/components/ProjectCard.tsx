@@ -1,16 +1,16 @@
+import { ProjectCardProps } from "@/types/project";
 import Image from "next/image";
-import { ProjectCardProp } from "../types/home";
 import Link from "next/link";
 
 export function ProjectCard({
   id,
   number,
-  projectName,
+  title,
   type,
   year,
   src,
   stacks,
-}: ProjectCardProp) {
+}: ProjectCardProps) {
   const fileType = src.slice(-3);
 
   return (
@@ -19,7 +19,7 @@ export function ProjectCard({
         <div className="flex-1 flex flex-col gap-5 md:gap-9 md:sticky md:top-8 h-fit text-black/90">
           <div className="flex justify-between">
             <p className="md:text-black/60">[{number}]</p>
-            <p>{projectName}</p>
+            <p>{title}</p>
           </div>
           <div className="flex flex-col gap-2.5 md:gap-4.5">
             <div className="flex justify-between">
@@ -63,7 +63,7 @@ export function ProjectCard({
               <Image
                 className="object-cover size-full"
                 src={src}
-                alt={`Preview of ${projectName}`}
+                alt={`Preview of ${title}`}
                 fill
               />
             </div>

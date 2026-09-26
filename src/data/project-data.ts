@@ -5,15 +5,14 @@ export const projects: ProjectData[] = [
     id: "leadbookstore",
     repo: "https://github.com/KingsleyUdegbunam/LeadBookStore",
     liveLink: "https://leadbookstore.netlify.app/",
+    stacks: ["React", "Vite", "JS", "Supabase", "PayStack"],
     header: {
       title: "Lead Bookstore",
-
-      context: "Study",
       year: 2026,
       team: "Frontend",
       role: "Design & Development",
       deliverables: "web app",
-      type: "Personal Project",
+      type: "Study | Ecommerce",
     },
     heroImage: "/assets/lead-store.mp4",
     summary: "A leadership-centered bookstore",
@@ -141,6 +140,8 @@ export const projects: ProjectData[] = [
       year: 2025,
       type: "Learning tool",
     },
+    stacks: ["HTML", "CSS", "JS"],
+
     heroImage: "/assets/memry.mp4",
     summary: "A lightweight flashcard application built around active recall.",
     sections: {
@@ -220,6 +221,7 @@ export const projects: ProjectData[] = [
     liveLink: "https://quantized23.netlify.app/",
     repo: "https://github.com/KingsleyUdegbunam/quantized",
     heroImage: "/assets/quantized.mp4",
+    stacks: ["HTML", "CSS", "JS"],
     summary:
       "A photo gallery of memories from the Physics class of 2023 at the Federal University of Technology, Owerri, FUTO.",
     header: {
