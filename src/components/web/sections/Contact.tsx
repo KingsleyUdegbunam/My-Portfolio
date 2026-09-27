@@ -79,7 +79,7 @@ export default function Contact() {
                   )}
                 </span>
 
-                <ArrowIcon color="white" />
+                <ArrowIcon />
               </a>
             );
           })}

@@ -1,7 +1,6 @@
-export function ArrowIcon({ color = "black" }) {
+export function ArrowIcon() {
   return (
     <svg
-      style={{ color: color }}
       className="size-4  rotate-45! transition-colors duration-300 group-hover:text-blue-700!"
       fill="none"
       viewBox="0 0 24 24"
