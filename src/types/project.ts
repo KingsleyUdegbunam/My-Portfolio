@@ -37,16 +37,13 @@ export type ProjectData = {
     role: string;
     year: number;
     client?: string;
-    context?: string;
     type?: string;
-    team?: string;
     contributors?: string;
     stack: string[];
-    deliverables?: string;
   };
   summary: string;
   heroImage: string;
-  overview?: { id: string; header: string; p1: string; p2?: string };
+  overview?: { id: string; header: string; p: string[] };
   sections: {
     overview: Article;
     challenge?: Article;
