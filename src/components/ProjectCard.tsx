@@ -58,7 +58,7 @@ export function ProjectCard({
               href={repo}
               className="flex gap-2 justify-end items-end text-end font-robotoMono transition-all duration-300 hover:text-blue-600 w-fit group"
             >
-              Repository <ArrowIcon />{" "}
+              Repository <ArrowIcon />
             </a>
           </div>
 
