@@ -20,8 +20,8 @@ export type Article = {
   image?: string;
 };
 
-export type ProjectCardProps = Pick<ProjectData, "id" | "stacks"> &
-  Pick<ProjectData["header"], "title" | "year" | "stack" | "type"> & {
+export type ProjectCardProps = Pick<ProjectData, "id" | "repo"> &
+  Pick<ProjectData["header"], "title" | "year" | "stack" | "type" | "role"> & {
     number: number;
   } & {
     src: ProjectData["heroImage"];
@@ -31,23 +31,18 @@ export type ProjectData = {
   id: string;
   repo: string;
   liveLink: string;
-  stacks: string[];
 
   header: {
     title: string;
     role: string;
     year: number;
     client?: string;
-    context?: string;
     type?: string;
-    team?: string;
     contributors?: string;
-    stack?: string;
-    deliverables?: string;
+    stack: string[];
   };
   summary: string;
   heroImage: string;
-  overview?: { id: string; header: string; p1: string; p2?: string };
   sections: {
     overview: Article;
     challenge?: Article;

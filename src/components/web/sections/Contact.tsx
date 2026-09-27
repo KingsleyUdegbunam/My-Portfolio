@@ -1,6 +1,7 @@
 import { CSSProperties } from "react";
 import Image from "next/image";
 import { ToTopBtn } from "../../ToTopButton";
+import { ArrowIcon } from "@/components/ArrowIcon";
 
 export default function Contact() {
   const contactLinks = [
@@ -78,19 +79,7 @@ export default function Contact() {
                   )}
                 </span>
 
-                <svg
-                  className="size-4 text-white! rotate-45! transition-colors duration-300 group-hover:text-red-800"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 10l7-7m0 0l7 7m-7-7v18"
-                  />
-                </svg>
+                <ArrowIcon />
               </a>
             );
           })}

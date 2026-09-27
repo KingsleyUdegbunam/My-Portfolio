@@ -3,7 +3,13 @@ import Link from "next/link";
 
 export function NextProject({ index }: { index: number }) {
   const nextIndex = index + 1;
-  const validNextIndex = projects[nextIndex]?.id ? nextIndex : 0;
+  const validNextIndex =
+    projects[nextIndex]?.id === "flaretag"
+      ? nextIndex + 1
+      : projects[nextIndex]?.id
+        ? nextIndex
+        : 0;
+
   return (
     <div className="flex flex-col justify-center items-center gap-10 mb-20 lg:mb-40">
       <div className="flex flex-col items-center gap-3">

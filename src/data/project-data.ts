@@ -5,14 +5,12 @@ export const projects: ProjectData[] = [
     id: "leadbookstore",
     repo: "https://github.com/KingsleyUdegbunam/LeadBookStore",
     liveLink: "https://leadbookstore.netlify.app/",
-    stacks: ["React", "Vite", "JS", "Supabase", "PayStack"],
     header: {
       title: "Lead Bookstore",
       year: 2026,
-      team: "Frontend",
       role: "Design & Development",
-      deliverables: "web app",
-      type: "Study | Ecommerce",
+      type: "Website",
+      stack: ["React", "Supabase", "PayStack"],
     },
     heroImage: "/assets/lead-store.mp4",
     summary: "A leadership-centered bookstore",
@@ -130,17 +128,43 @@ export const projects: ProjectData[] = [
     },
   },
   {
+    id: "flaretag",
+    liveLink: "",
+    repo: "https://github.com/hngprojects/social_badge-ui",
+    heroImage: "/assets/flaretag.mp4",
+    summary: "",
+    header: {
+      title: "FlareTag",
+      year: 2026,
+      type: "Web Application",
+      role: "Frontend Lead",
+      stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    },
+
+    sections: {
+      overview: {
+        id: "overiew",
+        p: [""],
+      },
+      challenge: { id: "challenge", p: [] },
+      direction: { id: "direction", p: [] },
+      experience: { id: "experience", articles: [] },
+      engineering: { id: "engineering", articles: [] },
+      constraints: { id: "constraints", p: [] },
+      reflection: { id: "reflection", p: [] },
+    },
+  },
+  {
     id: "memry",
     repo: "https://github.com/KingsleyUdegbunam/Memry",
     liveLink: "https://usememry.netlify.app",
     header: {
       title: "Memry",
       role: "Frontend Developer",
-      deliverables: "Web app",
       year: 2025,
-      type: "Learning tool",
+      type: "Web Application",
+      stack: ["HTML", "CSS", "JavaScript"],
     },
-    stacks: ["HTML", "CSS", "JS"],
 
     heroImage: "/assets/memry.mp4",
     summary: "A lightweight flashcard application built around active recall.",
@@ -221,15 +245,14 @@ export const projects: ProjectData[] = [
     liveLink: "https://quantized23.netlify.app/",
     repo: "https://github.com/KingsleyUdegbunam/quantized",
     heroImage: "/assets/quantized.mp4",
-    stacks: ["HTML", "CSS", "JS"],
     summary:
       "A photo gallery of memories from the Physics class of 2023 at the Federal University of Technology, Owerri, FUTO.",
     header: {
       title: "Quantized",
       year: 2025,
-      type: "Personal Project",
+      type: "Web Application",
       role: "Design and Development",
-      deliverables: "Web App",
+      stack: ["HTML", "CSS", "JavaScript"],
     },
     sections: {
       overview: {

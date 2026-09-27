@@ -10,8 +10,10 @@ export default function Projects() {
       title: project.header.title,
       src: project.heroImage,
       type: project.header.type,
+      role: project.header.role,
       year: project.header.year,
-      stacks: project.stacks,
+      stack: project.header.stack,
+      repo: project.repo,
     }),
   );
   const projectsArray = projectsBaseArray.map((project) => ({
