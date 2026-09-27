@@ -128,6 +128,33 @@ export const projects: ProjectData[] = [
     },
   },
   {
+    id: "flaretag",
+    liveLink: "",
+    repo: "https://github.com/hngprojects/social_badge-ui",
+    heroImage: "/assets/flaretag.mp4",
+    summary: "",
+    header: {
+      title: "FlareTag",
+      year: 2026,
+      type: "Web Application",
+      role: "Frontend Lead",
+      stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    },
+
+    sections: {
+      overview: {
+        id: "overiew",
+        p: [""],
+      },
+      challenge: { id: "challenge", p: [] },
+      direction: { id: "direction", p: [] },
+      experience: { id: "experience", articles: [] },
+      engineering: { id: "engineering", articles: [] },
+      constraints: { id: "constraints", p: [] },
+      reflection: { id: "reflection", p: [] },
+    },
+  },
+  {
     id: "memry",
     repo: "https://github.com/KingsleyUdegbunam/Memry",
     liveLink: "https://usememry.netlify.app",
