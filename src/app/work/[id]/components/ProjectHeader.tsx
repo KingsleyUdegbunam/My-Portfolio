@@ -11,7 +11,7 @@ export function ProjectHeader({
       <h1 className=" text-center uppercase font-semibold font-koulen text-[3rem] md:text-[4.5rem] lg:text-[6rem] leading-[100%]! ">
         {project.header.title}
       </h1>
-      <div className="grid  grid-cols-[1fr_max-content_1fr]   lg:text-center gap-2 py-8 ">
+      <div className="grid grid-cols-2 md:grid-cols-[1fr_max-content_1fr] lg:text-center gap-y-2 py-8">
         <ProjectMeta type="type" content={project.header.type} />
 
         <ProjectMeta type="role" content={project.header.role} />
