@@ -28,7 +28,7 @@ export function HeroVideo({
   return (
     <video
       ref={videoRef}
-      className={`object-cover h-full w-full  ${scale ? "scale-105" : ""}`}
+      className={`object-cover object-top h-full w-full  ${scale ? "scale-105" : ""}`}
       autoPlay
       loop
       muted

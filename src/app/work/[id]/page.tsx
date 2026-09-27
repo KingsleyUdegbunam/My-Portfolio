@@ -18,9 +18,9 @@ export default async function ProjectPage({ params }: Params) {
   const sections = project.sections;
 
   return (
-    <div className="max-w-[2500px] mx-auto!">
+    <div className="max-w-[2500px]! w-full">
       <ProjectHeader project={project} />
-      <div className="max-h-dvh overflow-hidden">
+      <div className=" w-full aspect-video md:h-dvh md:aspect-auto md:max-h-dvh  overflow-hidden">
         <HeroVideo src={project.heroImage} />
       </div>
       <StandAloneSection section={sections.overview} />
