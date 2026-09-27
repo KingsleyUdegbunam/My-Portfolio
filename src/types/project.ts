@@ -43,7 +43,6 @@ export type ProjectData = {
   };
   summary: string;
   heroImage: string;
-  overview?: { id: string; header: string; p: string[] };
   sections: {
     overview: Article;
     challenge?: Article;
